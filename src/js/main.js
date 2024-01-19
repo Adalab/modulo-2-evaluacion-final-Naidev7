@@ -1,4 +1,4 @@
 'use strict';
-import './search.js';
+import './constats.js';
 import './cards.js';
 import './favs.js';
