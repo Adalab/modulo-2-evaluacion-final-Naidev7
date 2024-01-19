@@ -17,12 +17,15 @@ const renderPrint = (seriesArr, searchValue) => {
         let article = document.createElement("article");
         article.setAttribute('class', 'js-article');
         article.setAttribute('id', `${item.mal_id}`);
+        article.setAttribute('class', 'article');
         
         let tittle = document.createElement("h2");
         tittle.appendChild(document.createTextNode(`${item.title}`));
+        tittle.setAttribute('class', 'title');
   
         let img = document.createElement("img");
         img.src = item.images.jpg.image_url;
+        img.setAttribute('class', 'img');
   
         article.appendChild(tittle);
         article.appendChild(img);

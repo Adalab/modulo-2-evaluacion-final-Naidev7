@@ -1,8 +1,99 @@
-/**{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap:20px ;
-    text-align: center;
-}*/
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-image: url(https://e0.pxfuel.com/wallpapers/312/1022/desktop-wallpaper-anime-scenery-anime-tree.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header__h1 {
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  text-align: center;
+  display: block;
+  font-family: $font-main;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 33ch;
+  color: rgb(5, 5, 5);
+
+  animation: typing 3s steps(12), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.form {
+  display: flex;
+  justify-content: center;
+  height: 30%;
+  gap: 15px;
+  background-color: grey;
+  position: absolute;
+}
+.inputSearch {
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.65rem;
+  border-radius: 15px;
+  font-family: $font-main;
+  border: none;
+  position: relative;
+  background-color: rgb(240, 248, 255);
+}
+.searchBtn {
+  position: absolute;
+  right: 66px;
+  width: 30px;
+  height: 20px;
+  background: none;
+  border: none;
+}
+@media(min-width:768px){
+    .header__h1{
+        font-size: 2rem;
+    }
+    .inputSearch{
+        width: 500px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+   .searchBtn{
+    position: absolute;
+    margin-top: 5px;
+    right: 200px;
+    color:rgb(115, 115, 115) ;
+    font-size: 30px;
+   }
+}
+
+@media(min-width:1400px){
+    .header__h1{
+        font-size: 2.6rem;
+    }
+    .inputSearch{
+        position: relative;
+        width: 800px;
+        height: 40px;
+        font-size: 1.7rem;
+    }
+   .searchBtn{
+    position: absolute;
+    margin-top: 5px;
+    right: 280px;
+    font-size: 30px;
+   }
+}
