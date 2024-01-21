@@ -7,17 +7,16 @@ const getDataApi = (searchValue) => {
     .then((response) => response.json())
     .then((data) => {
       seriesArr = data.data;
-      console.log(seriesArr);
-      console.log(seriesArr.mal_id);
-      renderPrint(seriesArr);
+      renderPrint(seriesArr, cardsSection);
     });
 };
-const renderPrint = (seriesArr, searchValue) => {
-    for (const item of seriesArr) {
+const renderPrint = (series, section) => {
+   section.innerHTML = '';
+   for (const item of series) {
         let article = document.createElement("article");
-        article.setAttribute('class', 'js-article');
+        article.setAttribute('class', 'js-article article');
         article.setAttribute('id', `${item.mal_id}`);
-        article.setAttribute('class', 'article');
+
         
         let tittle = document.createElement("h2");
         tittle.appendChild(document.createTextNode(`${item.title}`));
@@ -30,7 +29,7 @@ const renderPrint = (seriesArr, searchValue) => {
         article.appendChild(tittle);
         article.appendChild(img);
   
-        cardsSection.appendChild(article);
+        section.appendChild(article);
     }    
     listener();
 };

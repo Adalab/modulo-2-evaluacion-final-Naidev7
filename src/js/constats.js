@@ -6,4 +6,4 @@ const btnReset = document.querySelector('.js-btnReset');
 
 //constants of favs
 
-const favsSection = document.querySelector('.js-favsCont');
+let favSection = document.querySelector('.js-favsCont');
