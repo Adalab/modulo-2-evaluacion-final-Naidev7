@@ -12,7 +12,7 @@ const handleFavs = (event) => {
     renderFavs(favSeries, favSection);
   }
   const serieString = JSON.stringify(favSeries);
-  localStorage.setItem("favSeries", serieString);
+ localStorage.setItem("favSeries", serieString); 
   return favSeries;
 };
 const listener = () => {
@@ -28,8 +28,8 @@ const getLocalData = () => {
   }
 };
 
-const renderFavs = (series, section) => {
-  section.innerHTML = "";
+const renderFavs = (series, favSection) => {
+  favSection.innerHTML = "";
   for (const eachFav of series) {
     let article = document.createElement("article");
     article.setAttribute("class", "js-article article");
@@ -62,22 +62,24 @@ const renderFavs = (series, section) => {
     /*        article.appendChild(btnAdd);
        article.appendChild(btnRemove); */
 
-    section.appendChild(article);
-    return section;
+    favSection.appendChild(article);
   }
   favDeleted();
 };
 
-const getDeleteFav = (event) => {
+
+
+const getDeleteFav = (event, favSection) => {
   event.preventDefault();
+  console.log(favSeries)
   const idDelete = event.currentTarget.id;
-  const clickedFav = event.currentTarget;
   const foundId = favSeries.findIndex((serie) => serie.mal_id == idDelete);
- if (foundId >= 0) {
-    favSeries.splice(foundId, 1); //Elimina del array 
-    localStorage.removeItem('favSeries'); //Me elimina todo el local 
-    
-  } 
+  favSeries.splice(foundId, 1);
+  console.log(favSeries)
+  localStorage.setItem("favSeries", foundId); 
+  renderFavs();
+  renderPrint();
+
 };
 
 const favDeleted = () => {

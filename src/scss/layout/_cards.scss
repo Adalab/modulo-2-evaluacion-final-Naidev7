@@ -20,12 +20,13 @@
 .title{
     font-family:  $font-main;
     font-size: 1rem;
+    background: none;
 };
 .img{
     width: 90%;
 };
 .favSection{
-    background-color:rgb(56, 113, 164) ;
+    background-color: rgb(157, 206, 248) ;
     font-family: cursive;
     
 };
@@ -35,12 +36,14 @@
     font-size: 0.85rem;
     margin-top: 15px;
     text-transform: uppercase;
+    color: white
 };
 .cardsText{
     font-family: $font-main;
     font-size: 0.85rem;
     margin-top: 15px;
     text-transform: uppercase;
+    color: white;
 }
 .btnAdd{
     padding: 5px;
