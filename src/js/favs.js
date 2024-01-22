@@ -69,7 +69,7 @@ const renderFavs = (series, favSection) => {
 
 
 
-const getDeleteFav = (event, favSection) => {
+const getDeleteFav = (event) => {
   event.preventDefault();
   console.log(favSeries)
   const idDelete = event.currentTarget.id;
@@ -77,9 +77,6 @@ const getDeleteFav = (event, favSection) => {
   favSeries.splice(foundId, 1);
   console.log(favSeries)
   localStorage.setItem("favSeries", foundId); 
-  renderFavs();
-  renderPrint();
-
 };
 
 const favDeleted = () => {
