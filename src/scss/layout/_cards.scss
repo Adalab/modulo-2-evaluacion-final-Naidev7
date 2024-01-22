@@ -1,13 +1,8 @@
 .mainContainer{
     display: flex;
-    
-}
-
-
-
-
-
-
+    margin: 0 20px 0 20px;
+    justify-content: space-between;
+};
 .article{
     display: flex;
     flex-direction: column;
@@ -21,23 +16,56 @@
     border-radius: 15px;
     padding: 10px;
 };
-.article:hover{
-    background-color: rgb(56, 113, 164) ;
-}
+
 .title{
     font-family:  $font-main;
-    font-size: 0.8rem;
+    font-size: 1rem;
 };
 .img{
     width: 90%;
 };
-
-.favsArt{
-    width: 40px;
-}
-
 .favSection{
-    background-color: paleturquoise;
+    background-color:rgb(56, 113, 164) ;
     font-family: cursive;
     
+};
+
+.favsText{
+    font-family: $font-main;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    text-transform: uppercase;
+};
+.cardsText{
+    font-family: $font-main;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+.btnAdd{
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+   background:none;
+   border: none;
+}
+.btnRemove{
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+   background:none;
+   border: none;
+   color:rgb(56, 113, 164) ;
+}
+.btnDelete{
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+   background:none;
+   border: none;
+   background-color:rebeccapurple ;
+   color: white;
 }

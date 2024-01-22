@@ -1,26 +1,21 @@
 header {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 20vh;
-  background-image: url(https://e0.pxfuel.com/wallpapers/312/1022/desktop-wallpaper-anime-scenery-anime-tree.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-color:rgb(56, 113, 164) ;
 }
-
 .header__h1 {
   margin-bottom: 25px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
   display: block;
   font-family: $font-main;
   white-space: nowrap;
   border-right: 4px solid;
   width: 33ch;
-  color: rgb(5, 5, 5);
+  color: white;
 
   animation: typing 3s steps(12), blink 0.5s infinite step-end alternate;
   overflow: hidden;
@@ -36,64 +31,57 @@ header {
   }
 }
 .form {
-  display: flex;
-  justify-content: center;
-  height: 30%;
-  gap: 15px;
   background-color: grey;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .inputSearch {
   width: 200px;
   padding: 5px;
   text-align: center;
   font-size: 0.65rem;
-  border-radius: 15px;
+  border-radius: 55px;
   font-family: $font-main;
   border: none;
-  position: relative;
   background-color: rgb(240, 248, 255);
-}
-.searchBtn {
-  position: absolute;
-  right: 66px;
-  width: 30px;
-  height: 20px;
-  background: none;
-  border: none;
-}
-@media(min-width:768px){
-    .header__h1{
-        font-size: 2rem;
-    }
-    .inputSearch{
-        width: 500px;
-        height: 40px;
-        font-size: 1.2rem;
-    }
-   .searchBtn{
-    position: absolute;
-    margin-top: 5px;
-    right: 200px;
-    color:rgb(115, 115, 115) ;
-    font-size: 30px;
-   }
+  position: relative;
 }
 
-@media(min-width:1400px){
-    .header__h1{
-        font-size: 2.6rem;
-    }
-    .inputSearch{
-        position: relative;
-        width: 800px;
-        height: 40px;
-        font-size: 1.7rem;
-    }
-   .searchBtn{
-    position: absolute;
-    margin-top: 5px;
-    right: 280px;
-    font-size: 30px;
-   }
+/* .searchBtn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-size: 0.9rem;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  left: 190px;
+} */
+@media (min-width: 768px) {
+  .header__h1 {
+    font-size: 2rem;
+  }
+  .inputSearch {
+    width: 500px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  .searchBtn {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__h1 {
+    font-size: 2.6rem;
+    width: 36ch;
+  }
+  .inputSearch {
+    position: relative;
+    width: 800px;
+    height: 40px;
+    font-size: 1.7rem;
+  }
 }

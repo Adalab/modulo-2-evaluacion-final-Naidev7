@@ -1,7 +1,5 @@
 let seriesArr = [];
-
 const apiUrl = `https://api.jikan.moe/v4/anime?`;
-
 const getDataApi = (searchValue) => {
   fetch(`${apiUrl}q=${searchValue}`)
     .then((response) => response.json())

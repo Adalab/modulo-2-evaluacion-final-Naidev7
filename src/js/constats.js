@@ -7,3 +7,7 @@ const btnReset = document.querySelector('.js-btnReset');
 //constants of favs
 
 let favSection = document.querySelector('.js-favsCont');
+
+//constants add and remove items
+const btnAdd = document.querySelectorAll('.btnAdd');
+const btnRemove = document.querySelectorAll('.btnRemove');
